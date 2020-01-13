@@ -1,6 +1,6 @@
 body {padding: 0; margin: 0;} 
 
-#description {
+.section {
     background: black;
     margin: 0;
     padding: 50px;
@@ -26,3 +26,37 @@ body {padding: 0; margin: 0;}
     height: 120px;
     width: auto;
 }
+
+@media (min-width: 320px) and (max-width: 600px) {
+    .images {
+        height: 60px;
+        width: auto;
+    }
+    
+}
+
+#navbar ul { 
+	margin: 0; 
+	padding: 5px; 
+	list-style-type: none; 
+	text-align: center; 
+    background-color: #000; 
+    font-family: 'Source Code Pro', monospace;
+    font-size: 18px;
+	} 
+
+#navbar ul li {  
+	display: inline; 
+	} 
+
+#navbar ul li a { 
+	text-decoration: none; 
+	padding: .2em 1em; 
+	color: #fff; 
+	background-color: #000; 
+	} 
+
+#navbar ul li a:hover { 
+	color: #000; 
+	background-color: #fff; 
+	} 
