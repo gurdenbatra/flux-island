@@ -12,7 +12,7 @@ function preload() {
 }
 
 function setup() {
-  var canvas = createCanvas(displayWidth, displayHeight);
+  var canvas = createCanvas(windowWidth, windowHeight);
   canvas.parent('sketch-holder');
   background(0);
   noiseDetail(2);
@@ -59,5 +59,16 @@ function draw() {
   fill(255);
   textSize(100);
   text('1.2 - 22.2', width/2 - 250, height/2+80);
+
+  fill(0);
+  rect(width/2 - 440, height/2 + 140, 1100,120);
+  textFont(myFont2);
+  fill(255);
+  textSize(100);
+  text('Vuotalo, Vuosaari', width/2 - 400, height/2+220);
   
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }
