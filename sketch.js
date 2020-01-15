@@ -1,9 +1,15 @@
-var incX = 0.04;
-var incY = 0.05;
-var distance = 22;
-var wavesHeight = 50;
+var incX = 0.05;
+var incY = 0.07;
+var distance = 25;
+var wavesHeight = 42;
 var looping = true;
 var frame = 0;
+
+var xoff = 0;
+var yoff = 0.5;
+var roff = 1;
+var goff = 2;
+var boff = 3;
 
 let myFont, myFont2;
 function preload() {
@@ -20,16 +26,20 @@ function setup() {
 
 function draw() {
   var zOff = frameCount * 0.01;
-  background(0);
+  var noiseyX = noise(xoff);
+  var x = map(noiseyX, 0, 1, 0, width);
+  var noiseyY = noise(yoff);
+  var y = map(noiseyY, 0, 1, 0, height);
+  background(noise(goff)*90,noise(goff)*40,noise(goff)*35);
+
   //noStroke();
   strokeWeight(0.5);
-	stroke(0);
+  stroke(0);
   var yOff = 0;
   for(var y = - wavesHeight; y < height + wavesHeight; y += distance) {
     var xOff = 0;
     var r = xOff;
     beginShape();
-		
     for(var x = -wavesHeight; x < width *2; x += distance) {
       var n = noise(xOff, yOff, zOff);
       var g = n;
@@ -42,77 +52,88 @@ function draw() {
       b = map(yOff, 0, 4, 255, 255);
       fill(r, g, b, b*1.5);
     }
+
+
+
     endShape();
     yOff += incY;
   
   }
 
+  xoff += 0.005;
+  yoff += 0.005;
+  roff += 0.01;
+  goff += 0.01;
+  boff += 0.01;
+
   // big screen
   if(width > 1479) {
-    strokeWeight(0.5);
+    noStroke();
     textFont(myFont);
     fill(255);
-    textSize(250);
-    text('Flux Island', width/2 - 720, height/2-50);
+    textSize(450);
+    text('Flux', width/2 - 690, height/2-50);
+    text('Island', width/2 - 690, height/2+320);
   
-    fill(0);
-    rect(width/2 - 290, height/2 - 10, 640,120);
-    textFont(myFont2);
-    fill(255);
-    textSize(100);
-    text('1.2 - 22.2', width/2 - 270, height/2+80);
+    // fill(0);
+    // rect(width/2 - 290, height/2 - 10, 640,120);
+    // textFont(myFont2);
+    // fill(255);
+    // textSize(100);
+    // text('1.2 - 22.2', width/2 - 270, height/2+80);
   
-    fill(0);
-    rect(width/2 - 500, height/2 + 140, 1100,120);
-    textFont(myFont2);
-    fill(255);
-    textSize(100);
-    text('Vuotalo, Vuosaari', width/2 - 450, height/2+220);
+    // fill(0);
+    // rect(width/2 - 500, height/2 + 140, 1100,120);
+    // textFont(myFont2);
+    // fill(255);
+    // textSize(100);
+    // text('Vuotalo, Vuosaari', width/2 - 450, height/2+220);
   }
   // mid sized screen/iPad
-  else if(width <= 1479 && width > 800){
-    strokeWeight(0.5);
+  else if(width <= 1479 && width > 1000){
+    noStroke();
     textFont(myFont);
     fill(255);
-    textSize(200);
-    text('Flux Island', width/2 - 500, height/2-50);
+    textSize(350);
+    text('Flux', width/2 - 500, height/2-50);
+    text('Island', width/2 - 500, height/2+240);
   
-    fill(0);
-    rect(width/2 - 270, height/2 - 10, 640,120);
-    textFont(myFont2);
-    fill(255);
-    textSize(100);
-    text('1.2 - 22.2', width/2 - 250, height/2+80);
+    // fill(0);
+    // rect(width/2 - 270, height/2 - 10, 640,120);
+    // textFont(myFont2);
+    // fill(255);
+    // textSize(100);
+    // text('1.2 - 22.2', width/2 - 250, height/2+80);
   
-    fill(0);
-    rect(width/2 - 440, height/2 + 140, 1100,120);
-    textFont(myFont2);
-    fill(255);
-    textSize(100);
-    text('Vuotalo, Vuosaari', width/2 - 400, height/2+220);
+    // fill(0);
+    // rect(width/2 - 440, height/2 + 140, 1100,120);
+    // textFont(myFont2);
+    // fill(255);
+    // textSize(100);
+    // text('Vuotalo, Vuosaari', width/2 - 400, height/2+220);
   }
   //phone
   else {
-    strokeWeight(0.5);
+    noStroke();
     textFont(myFont);
     fill(255);
-    textSize(100);
-    text('Flux', width/2 - 100, height/2-50);
-    text('Island', width/2 - 140, height/2+50);
+    textSize(120);
+    text('Flux', width/2 - 200, height/2-80);
+    text('Island', width/2 - 200, height/2+50);
   
-    fill(0);
-    rect(width/2 -100, height/2 + 80, 200,50);
-    textFont(myFont2);
-    fill(255);
-    textSize(20);
-    text('1.2 - 22.2', width/2 - 70, height/2+110);
+    // fill(0);
+    // rect(width/2 -100, height/2 + 80, 200,50);
+    // textFont(myFont2);
+    // fill(255);
+    // textSize(20);
+    // text('1.2 - 22.2', width/2 - 70, height/2+110);
   
-    fill(0);
-    rect(width/2 -120, height/2 + 150, 240,50);
-    textFont(myFont2);
-    fill(255);
-    textSize(20);
-    text('Vuotalo, Vuosaari', width/2 - 100, height/2+185);
+    // fill(0);
+    // rect(width/2 -120, height/2 + 150, 240,50);
+    // textFont(myFont2);
+    // fill(255);
+    // textSize(20);
+    // text('Vuotalo, Vuosaari', width/2 - 100, height/2+185);
 
   }
 
