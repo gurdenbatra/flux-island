@@ -117,9 +117,9 @@ function draw() {
     noStroke();
     textFont(myFont);
     fill(255);
-    textSize(120);
-    text('Flux', width/2 - 200, height/2-80);
-    text('Island', width/2 - 200, height/2+50);
+    textSize(110);
+    text('Flux', width/2 - 180, height/2-80);
+    text('Island', width/2 - 180, height/2+50);
   
     // fill(0);
     // rect(width/2 -100, height/2 + 80, 200,50);
