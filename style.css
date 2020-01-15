@@ -27,10 +27,32 @@ body {padding: 0; margin: 0;}
     width: auto;
 }
 
+.loadingclass {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 50px;
+    background: black;
+    margin: 0;
+    padding: 250px;
+    color: white;
+    text-align: center;
+}
+
 @media (min-width: 320px) and (max-width: 600px) {
     .images {
         height: 60px;
         width: auto;
+    }
+
+    .section {
+        font-size: 20px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .loadingclass {
+        padding: 50px;
     }
     
 }
@@ -61,12 +83,3 @@ body {padding: 0; margin: 0;}
 	background-color: #fff; 
     } 
     
-.loadingclass {
-    font-family: 'Source Code Pro', monospace;
-    font-size: 50px;
-    background: black;
-    margin: 0;
-    padding: 250px;
-    color: white;
-    text-align: center;
-}
