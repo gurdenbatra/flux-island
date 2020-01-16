@@ -30,7 +30,7 @@ function draw() {
   var x = map(noiseyX, 0, 1, 0, width);
   var noiseyY = noise(yoff);
   var y = map(noiseyY, 0, 1, 0, height);
-  background(noise(goff)*90,noise(goff)*40,noise(goff)*35);
+  background(noise(roff)*40,noise(goff)*200,noise(boff)*255);
 
   //noStroke();
   strokeWeight(0.5);

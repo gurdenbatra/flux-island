@@ -23,9 +23,10 @@ body {padding: 0; margin: 0;}
 }
 
 .images {
-    height: 120px;
+    height: 90px;
     width: auto;
 }
+
 
 .loadingclass {
     font-family: 'Source Code Pro', monospace;
