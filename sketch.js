@@ -11,6 +11,11 @@ var roff = 1;
 var goff = 2;
 var boff = 3;
 
+var bgRch = 0;
+var bgGch = 0;
+var bgBch = 0;
+var bgCounter = 0;
+
 let myFont, myFont2;
 function preload() {
   myFont = loadFont('Noe-Text-Black.otf');
@@ -30,7 +35,44 @@ function draw() {
   var x = map(noiseyX, 0, 1, 0, width);
   var noiseyY = noise(yoff);
   var y = map(noiseyY, 0, 1, 0, height);
-  background(noise(roff)*40,noise(goff)*200,noise(boff)*255);
+  background(noise(roff)*bgRch,noise(goff)*bgGch,noise(boff)*bgBch);
+
+  if(frameCount % 60 === 0) {
+  
+    if(bgCounter === 0) {
+      bgRch = 197;
+      bgGch = 248;
+      bgBch = 243; 
+    } 
+    else if(bgCounter === 1) {
+      bgRch = 0;
+      bgGch = 233;
+      bgBch = 255;  
+    }
+    else if(bgCounter === 2) {
+      bgRch = 0;
+      bgGch = 176;
+      bgBch = 255;  
+    } 
+    else if(bgCounter === 3) {
+      bgRch = 33;
+      bgGch = 98;
+      bgBch = 227;  
+    }
+    else if(bgCounter === 4) {
+      bgRch = 68;
+      bgGch = 0;
+      bgBch = 242;  
+    }
+
+    bgCounter += 1;
+    if(bgCounter === 5) {
+      bgCounter = 0;
+    }
+  }
+
+
+  
 
   //noStroke();
   strokeWeight(0.5);
