@@ -64,9 +64,24 @@ function draw() {
       bgGch = 0;
       bgBch = 242;  
     }
+    else if(bgCounter === 5) {
+      bgRch = 0;
+      bgGch = 0;
+      bgBch = 0;  
+    }
+    else if(bgCounter === 6) {
+      bgRch = 0;
+      bgGch = 0;
+      bgBch = 0;  
+    }
+    else if(bgCounter === 7) {
+      bgRch = 0;
+      bgGch = 0;
+      bgBch = 0;  
+    }
 
     bgCounter += 1;
-    if(bgCounter === 5) {
+    if(bgCounter === 8) {
       bgCounter = 0;
     }
   }
