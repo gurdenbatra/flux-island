@@ -1,5 +1,5 @@
-var incX = 0.05;
-var incY = 0.07;
+var incX = 0.09;
+var incY = 0.08;
 var distance = 25;
 var wavesHeight = 42;
 var looping = true;
@@ -104,13 +104,11 @@ function draw() {
       var value = map(n, 0, 1, -wavesHeight, wavesHeight);
       curveVertex(x, y + value);
       xOff += incX;
-      r = map(xOff, 0, 3.5, 255, 255);
-      g = map(n, 0.2, 0.7, 255, 255);
-      b = map(yOff, 0, 4, 255, 255);
+      r = map(xOff, 0, 3.5, 0, 100);
+      g = map(n, 0.2, 0.7, 100, 200);
+      b = map(yOff, 0, 4, 0, 255);
       fill(r, g, b, b*1.5);
     }
-
-
 
     endShape();
     yOff += incY;
@@ -127,7 +125,7 @@ function draw() {
   if(width > 1479) {
     noStroke();
     textFont(myFont);
-    fill(255);
+    fill(0, noise(goff)*bgGch, noise(boff)*bgBch, 255);
     textSize(450);
     text('Flux', width/2 - 690, height/2-50);
     text('Island', width/2 - 690, height/2+320);

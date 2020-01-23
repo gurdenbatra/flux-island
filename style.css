@@ -27,6 +27,10 @@ body {padding: 0; margin: 0;}
     width: auto;
 }
 
+.link {
+    color: white !important;
+}
+
 
 .loadingclass {
     font-family: 'Source Code Pro', monospace;
