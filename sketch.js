@@ -148,7 +148,7 @@ function draw() {
   else if(width <= 1479 && width > 1000){
     noStroke();
     textFont(myFont);
-    fill(255);
+    fill(0, noise(goff)*bgGch, noise(boff)*bgBch, 255);
     textSize(350);
     text('Flux', width/2 - 500, height/2-50);
     text('Island', width/2 - 500, height/2+240);
@@ -171,7 +171,7 @@ function draw() {
   else {
     noStroke();
     textFont(myFont);
-    fill(255);
+    fill(0, noise(goff)*bgGch, noise(boff)*bgBch, 255);
     textSize(110);
     text('Flux', width/2 - 180, height/2-80);
     text('Island', width/2 - 180, height/2+50);
