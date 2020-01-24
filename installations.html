@@ -10,6 +10,37 @@
     <link rel="icon" href="favicon.png" type="image/x-icon">
   </head>
   <body>
+    <script>
+      function init()
+			{
+				setInterval(OnDraw, 60);
+			}
+
+            var time = 0;
+			var color = "#fff";
+			
+			function OnDraw()
+			{
+				time = time + 0.2;
+				var canvas = document.getElementById("mycanvas");
+				var dataLine = canvas.getContext("2d");
+			  var value = document.getElementById("lineWidth");
+				
+				dataLine.clearRect(0, 0, canvas.width, canvas.height);
+				
+				dataLine.beginPath();
+				for(cnt = -1; cnt <= canvas.width; cnt++)
+				{
+					dataLine.lineTo(cnt, canvas.height * 0.5 - (Math.random() * 2 + Math.cos(time + cnt * 0.05) * 20 ));
+				}
+				
+				//dataLine.lineWidth = value.value * 0.1;
+				dataLine.strokeStyle = color;
+				dataLine.stroke();
+			}
+
+init();
+      </script>
     <div id="navbar"> 
       <ul> 
       <li><a href="index.html">Home</a></li> 
@@ -20,6 +51,9 @@
     
     <div id="install" class='section'>
       <h1 class='center-align'>Installations</h1>
+      <div class='center-align'> 
+        <canvas  id="mycanvas"  width="800" height="120"></canvas>
+      </div>
       <p>Camouflage by Roee Cohen</p>
       <p>Once it was used as a decoy to save the capital from Soviet bombs. Later, it had its toxic landfill covered to save residents’ health.  Camouflage seems to shape the history of Vuosaari. Nature gardener Jukka Toivonen, the initiator of the dump rehabilitation, mentions that “...in 30 years’ time one will no longer notice that human activity has been involved in the creation of the area.” As the known pun about Finland suggests, Vuosaari may fluctuate between appearing as a rapidly developing urban district and yet entirely indiscernible.
       </p>

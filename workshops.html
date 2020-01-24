@@ -10,6 +10,37 @@
     <link rel="icon" href="favicon.png" type="image/x-icon">
   </head>
   <body>
+    <script>
+      function init()
+			{
+				setInterval(OnDraw, 60);
+			}
+
+            var time = 0;
+			var color = "#fff";
+			
+			function OnDraw()
+			{
+				time = time + 0.2;
+				var canvas = document.getElementById("mycanvas");
+				var dataLine = canvas.getContext("2d");
+			  var value = document.getElementById("lineWidth");
+				
+				dataLine.clearRect(0, 0, canvas.width, canvas.height);
+				
+				dataLine.beginPath();
+				for(cnt = -1; cnt <= canvas.width; cnt++)
+				{
+					dataLine.lineTo(cnt, canvas.height * 0.5 - (Math.random() * 2 + Math.cos(time + cnt * 0.05) * 20 ));
+				}
+				
+				//dataLine.lineWidth = value.value * 0.1;
+				dataLine.strokeStyle = color;
+				dataLine.stroke();
+			}
+
+init();
+      </script>
     <div id="navbar"> 
       <ul> 
       <li><a href="index.html">Home</a></li> 
@@ -20,6 +51,9 @@
     
     <div id="install" class='section'>
       <h1 class='center-align'>Workshops</h1>
+      <div class='center-align'> 
+        <canvas  id="mycanvas"  width="800" height="120"></canvas>
+      </div>
       <p class='center-align'>All workshops are free of charge.<br/> 
         Languages: Finnish, English<br/> 
         Pre-registration: hanna.westerholm@hel.fi
