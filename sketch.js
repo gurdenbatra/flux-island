@@ -16,10 +16,9 @@ var bgGch = 0;
 var bgBch = 0;
 var bgCounter = 0;
 
-let myFont, myFont2;
+let myFont;
 function preload() {
   myFont = loadFont('Noe-Text-Black.otf');
-  myFont2 = loadFont('SourceCodePro-Light.ttf');
 }
 
 function setup() {
@@ -129,20 +128,6 @@ function draw() {
     textSize(450);
     text('Flux', width/2 - 690, height/2-50);
     text('Island', width/2 - 690, height/2+320);
-  
-    // fill(0);
-    // rect(width/2 - 290, height/2 - 10, 640,120);
-    // textFont(myFont2);
-    // fill(255);
-    // textSize(100);
-    // text('1.2 - 22.2', width/2 - 270, height/2+80);
-  
-    // fill(0);
-    // rect(width/2 - 500, height/2 + 140, 1100,120);
-    // textFont(myFont2);
-    // fill(255);
-    // textSize(100);
-    // text('Vuotalo, Vuosaari', width/2 - 450, height/2+220);
   }
   // mid sized screen/iPad
   else if(width <= 1479 && width > 1000){
@@ -152,20 +137,6 @@ function draw() {
     textSize(350);
     text('Flux', width/2 - 500, height/2-50);
     text('Island', width/2 - 500, height/2+240);
-  
-    // fill(0);
-    // rect(width/2 - 270, height/2 - 10, 640,120);
-    // textFont(myFont2);
-    // fill(255);
-    // textSize(100);
-    // text('1.2 - 22.2', width/2 - 250, height/2+80);
-  
-    // fill(0);
-    // rect(width/2 - 440, height/2 + 140, 1100,120);
-    // textFont(myFont2);
-    // fill(255);
-    // textSize(100);
-    // text('Vuotalo, Vuosaari', width/2 - 400, height/2+220);
   }
   //phone
   else {
@@ -175,20 +146,6 @@ function draw() {
     textSize(110);
     text('Flux', width/2 - 180, height/2-80);
     text('Island', width/2 - 180, height/2+50);
-  
-    // fill(0);
-    // rect(width/2 -100, height/2 + 80, 200,50);
-    // textFont(myFont2);
-    // fill(255);
-    // textSize(20);
-    // text('1.2 - 22.2', width/2 - 70, height/2+110);
-  
-    // fill(0);
-    // rect(width/2 -120, height/2 + 150, 240,50);
-    // textFont(myFont2);
-    // fill(255);
-    // textSize(20);
-    // text('Vuotalo, Vuosaari', width/2 - 100, height/2+185);
 
   }
 
