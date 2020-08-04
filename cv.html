@@ -3,13 +3,84 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flux Island - CV</title>
+    <title>Flux Island - Material Light Team</title>
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
     <link rel="icon" href="favicon.png" type="image/x-icon">
   </head>
   <body>
-    WIP
+    <script>
+      function init()
+			{
+				setInterval(OnDraw, 60);
+			}
+
+            var time = 0;
+			var color = "#fff";
+			
+			function OnDraw()
+			{
+				time = time + 0.2;
+				var canvas = document.getElementById("mycanvas");
+				var dataLine = canvas.getContext("2d");
+			  var value = document.getElementById("lineWidth");
+				
+				dataLine.clearRect(0, 0, canvas.width, canvas.height);
+				
+				dataLine.beginPath();
+				for(cnt = -1; cnt <= canvas.width; cnt++)
+				{
+					dataLine.lineTo(cnt, canvas.height * 0.5 - (Math.random() * 2 + Math.cos(time + cnt * 0.05) * 20 ));
+				}
+				
+				//dataLine.lineWidth = value.value * 0.1;
+				dataLine.strokeStyle = color;
+				dataLine.stroke();
+			}
+
+init();
+      </script>
+    <div id="navbar"> 
+      <ul> 
+      <li><a href="index.html">Home</a></li> 
+      <li><a href="installations.html">Installations</a></li> 
+      <li><a href="workshops.html">Workshops</a></li> 
+      <li><a href="#contact">Contact</a></li> 
+      </ul> 
+    </div> 
+    
+    <div id="install" class='section'>
+      <h1 class='center-align'>Material Light Team</h1>
+      <div class='center-align'> 
+        <canvas  id="mycanvas"></canvas>
+      </div>
+      <p class='center-align'>
+        We offer mobile exhibition concept that consists of 4/6 immersive and interactive installations.
+      </p><br/>
+      <p><b>Camilo Sanchez</p>
+      <p>Brief CV or link?</p>
+      
+      <hr />
+      <p><b>Niko Tiainen</b></p>
+    
+      <hr />
+      
+    </div>
+    <div id="contact" class='section'>
+      <h1 class='center-align'>Contact</h1>
+      <p class='center-align'>
+        matti.niinimaki@aalto.fi <br />
+        info@krrnk.com<br />
+        liisi.soroush@aalto.fi<br />
+        emily.wingren@aalto.fi (for Ääniaalto)
+      </p>
+    </div>
+    <div id='footer'>
+      <a href='http://www.vuotalo.fi'><img class='images' src='./images/logo-helsinki.png'/></a>
+      <a href='https://www.aalto.fi/en/school-of-arts-design-and-architecture'><img class='images' src='./images/aalto_arts.png'/></a>
+      <a href='https://www.aalto.fi/en/aalto-media-lab'><img class='images' src='./images/mlab2.png' /></a>
+      <a href='https://dada.ayy.fi'><img class='images' src='./images/dada.png' /></a>
+    </div>
   </body>
 </html>
