@@ -3,44 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flux Island - Material Light Team</title>
+    <title>Flux Island - Material Light</title>
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
     <link rel="icon" href="favicon.png" type="image/x-icon">
   </head>
   <body>
-    <script>
-      function init()
-			{
-				setInterval(OnDraw, 60);
-			}
-
-            var time = 0;
-			var color = "#fff";
-			
-			function OnDraw()
-			{
-				time = time + 0.2;
-				var canvas = document.getElementById("mycanvas");
-				var dataLine = canvas.getContext("2d");
-			  var value = document.getElementById("lineWidth");
-				
-				dataLine.clearRect(0, 0, canvas.width, canvas.height);
-				
-				dataLine.beginPath();
-				for(cnt = -1; cnt <= canvas.width; cnt++)
-				{
-					dataLine.lineTo(cnt, canvas.height * 0.5 - (Math.random() * 2 + Math.cos(time + cnt * 0.05) * 20 ));
-				}
-				
-				//dataLine.lineWidth = value.value * 0.1;
-				dataLine.strokeStyle = color;
-				dataLine.stroke();
-			}
-
-init();
-      </script>
     <div id="navbar"> 
       <ul> 
       <li><a href="index.html">Home</a></li> 
@@ -50,27 +19,81 @@ init();
     </div> 
     
     <div id="install" class='section'>
-      <h1 class='center-align'>Material Light Team</h1>
+      <h1 class='center-align'>Material Light</h1>
       <div class='center-align'> 
-        <canvas  id="mycanvas"></canvas>
-      </div>
-      <p class='center-align'>
-        We offer mobile exhibition concept that consists of 4/6 immersive and interactive installations.
-      </p><br/>
-      <p><b>Camilo Sanchez</p>
-      <p>Brief CV or link?</p>
+        <video autoplay loop width="80%">
+          <source src="/images/TidePools.mp4"
+                  type="video/mp4">
+        </video>
+        <p><a href="https://vimeo.com/444518827" class='link' target="_blank">Video credit: Uvika Wahi</a></p>
       
-      <hr />
-      <p><b>Niko Tiainen</b></p>
-    
-      <hr />
+      
+      </div>
+      <br /><br />
+      <h3 class='center-align'>//------------ Description</h3>
+      <p>
+        We offer mobile exhibition concept that consists of 4/6 immersive and interactive installations.<br/>
+        The past> Flux Island Exhibition at Vuotalo Next> Material Light Art Festival 1.2021<br/>
+        Near Future> Kotka Light Art Festival / confirmed.<br/>
+        The works:<br/>
+        Havanto - Interactive installation the abstract cell-like entities react to their surroundings by adapting their form and reflecting the environment.<br/>
+        Chikramane & enue - HAP encoded interactive video that can be participated by the audience in surprising manner.<br/>
+        Soroush, Sanchez,enue, Lee interactive and immersive installation. Its physical structures invite the visitor to be synchronized with the audience, then transforming into movement, sound and light poetry. The motor and material structures will be renegotiated in an open dialogue. Tiainen, EPHYRA is a projected artificial creature based on algorithm and interaction between the observer. Pre-recorded soundscape creates a strong rising tension between the sound and visuals.
+      </p>
+
+      <br /><br />
+      <h3 class='center-align'>//------------ Connection</h3>
+      <p>
+        We offer mobile exhibition concept that consists of 4/6 immersive and interactive installations.<br/>
+        The past> Flux Island Exhibition at Vuotalo Next> Material Light Art Festival 1.2021<br/>
+        Near Future> Kotka Light Art Festival / confirmed.<br/>
+        The works:<br/>
+        Havanto - Interactive installation the abstract cell-like entities react to their surroundings by adapting their form and reflecting the environment.<br/>
+        Chikramane & enue - HAP encoded interactive video that can be participated by the audience in surprising manner.<br/>
+        Soroush, Sanchez,enue, Lee interactive and immersive installation. Its physical structures invite the visitor to be synchronized with the audience, then transforming into movement, sound and light poetry. The motor and material structures will be renegotiated in an open dialogue. Tiainen, EPHYRA is a projected artificial creature based on algorithm and interaction between the observer. Pre-recorded soundscape creates a strong rising tension between the sound and visuals.
+      </p>
+
+      <br /><br />
+      <h3 class='center-align'>//------------ Technology</h3>
+      <p>
+        We can bring most of the technology ourselves:<br/>
+        x4 computers<br/>
+        x4 Active Speakers 50W<br/>
+        x1 Subwoofer<br/>
+        x3 Projectors<br/>
+        x2 Infrared camera motion sensors<br/>
+        x2 Webcams<br/>
+        x6 CRT- Monitors<br/>
+        x2 LED Bars with DMX // We need to rent them unless the organization can provide them<br/>
+        x1 Fuze par DMX // We need to rent them unless the organization can provide them<br/>
+        x1 DMX USB interface<br/>
+        x2 headphones<br/>
+        We need support material such as backdrop, projector and speaker stands. We are open for discussion on how this material is provided.
+      </p><br/>
+      
+      <br /><br />
+      <h3 class='center-align'>//------------ Workshops</h3>
+      <p>
+        We are professional educators and lectures on new media content and interactive digital art. We provide workshops for all ages under the<br/>
+        topics of DIY electronics, creative coding and generative audiovisual art inter alia. We are open to negotiate the final content with festival organisers. The workshops were and are part of the concept in Vuotalo and Kotka Light Festival.
+      </p>
+
+      <br /><br />
+      <h3 class='center-align'>//------------ CVs</h3>
+      <p>
+        <a class='link' href="images/Camilo.pdf">J. Camilo​ Sánchez Carranco</a><br/>
+        <a class='link' href="images/LiisiCV.pdf">Liisi Soroush</a><br/>
+        <a class='link' href="images/JohnCV.pdf">John Lee</a><br/>
+        <a class='link' href="images/ReiCV.pdf">Reishabh Kailey</a><br/>
+        <a class='link' href="images/NikoCV.pdf">Niko Tiainen</a><br/>
+        <a class='link' href="images/OtsoCV.pdf">Otso Havanto</a><br/>
+        <a class='link' href="images/GurdenCV.pdf">Gurden Batra</a><br/>
+        <a class='link' href="https://drive.google.com/file/d/1Fkbkw3f0A1G7oNXFdGB-yypLqdRlPVbw/view">Ameya Chikramane</a>
+      </p>
       
     </div>
     <div id='footer'>
-      <a href='http://www.vuotalo.fi'><img class='images' src='./images/logo-helsinki.png'/></a>
-      <a href='https://www.aalto.fi/en/school-of-arts-design-and-architecture'><img class='images' src='./images/aalto_arts.png'/></a>
-      <a href='https://www.aalto.fi/en/aalto-media-lab'><img class='images' src='./images/mlab2.png' /></a>
-      <a href='https://dada.ayy.fi'><img class='images' src='./images/dada.png' /></a>
+
     </div>
   </body>
 </html>
